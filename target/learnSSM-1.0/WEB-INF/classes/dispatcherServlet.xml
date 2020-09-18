@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:mvc="http://www.springframework.org/schema/mvc"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd http://www.springframework.org/schema/mvc https://www.springframework.org/schema/mvc/spring-mvc.xsd">
+
+<!--    springMVC的配置文件-->
+<!--    因为使用的是注解方式来进行springMVC项目，那么肯定最开始的地方就是组件扫描器了-->
+    <context:component-scan base-package="com.lu.controller"/>
+
+<!--    配置视图解析器，主要是用于编写这个将其他的请求的代码都换成没有的后缀的代码-->
+
+    <bean  class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix" value="/WEB-INF/jsp/"/>
+        <property name="suffix" value=".jsp"/>
+    </bean>
+
+<!--    第一个响应ajax，返回值shijson-->
+<!--    第二个解决静态资源访问的问题-->
+
+    <mvc:annotation-driven/>
+
+
+
+
+
+
+
+
+
+
+</beans>

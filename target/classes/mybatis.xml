@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+    <settings>
+        <!--        这个是日志部分的-->
+        <setting name="logImpl" value="STDOUT_LOGGING"/>
+    </settings>
+
+    <typeAliases>
+        <!--        定义别名-->
+        <package name="com.lu.domain"/>
+    </typeAliases>
+    <!--    如果具有多个路径的时候，使用id值来进行这个区分,mapper的映射文件，在这个地方直接找到这个文件的对应地方-->
+    <mappers>
+        <package name="com.lu.dao"/>
+    </mappers>
+
+
+</configuration>
